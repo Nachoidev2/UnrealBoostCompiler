@@ -26,5 +26,6 @@ private slots:
 
 private:
     Ui::MainWindow *ui;
+    int equide= 0;
 };
 #endif // MAINWINDOW_H
