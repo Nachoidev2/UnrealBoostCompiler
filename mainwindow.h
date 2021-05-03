@@ -28,5 +28,7 @@ private:
     Ui::MainWindow *ui;
     int equide= 1;
     bool running= false;
+    void UpdateStatus();
+
 };
 #endif // MAINWINDOW_H

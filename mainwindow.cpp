@@ -60,3 +60,4 @@ void MainWindow::on_horizontalSlider_valueChanged(int value)
 {
     equide = ui->horizontalSlider->value();
 }
+
