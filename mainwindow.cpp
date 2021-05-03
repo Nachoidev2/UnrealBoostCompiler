@@ -1,7 +1,12 @@
 #include "mainwindow.h"
 #include "ui_mainwindow.h"
 #include <QEventLoop>
+#include <windows.h>
+#include <tlhelp32.h>
+#include <iostream>
+using namespace std;
 
+DWORD FindProcessId(const std::wstring& processName);
 
 MainWindow::MainWindow(QWidget *parent)
     : QMainWindow(parent)
@@ -19,24 +24,28 @@ MainWindow::~MainWindow()
 
 void MainWindow::on_Run_clicked()
 {
-    if (equide == 0)
+    if (running == true)
     {
-            system("wmic process where name=\"ShaderCompileWorker.exe\" CALL setpriority 32");
-            ui->RunBoost->setText("On");
+        if (equide == 0)
+        {
+                system("wmic process where name=\"ShaderCompileWorker.exe\" CALL setpriority 32");
+                ui->RunBoost->setText("On");
 
-    }
-    if (equide == 1)
-    {
-            system("wmic process where name=\"ShaderCompileWorker.exe\" CALL setpriority 32768");
-            ui->RunBoost->setText("On");
+        }
+        if (equide == 1)
+        {
+                system("wmic process where name=\"ShaderCompileWorker.exe\" CALL setpriority 32768");
+                ui->RunBoost->setText("On");
 
-    }
-    if (equide == 2)
-    {
-            system("wmic process where name=\"ShaderCompileWorker.exe\" CALL setpriority 128");
-            ui->RunBoost->setText("On");
+        }
+        if (equide == 2)
+        {
+                system("wmic process where name=\"ShaderCompileWorker.exe\" CALL setpriority 128");
+                ui->RunBoost->setText("On");
 
+        }
     }
+
 
 
 }
