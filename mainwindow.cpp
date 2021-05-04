@@ -13,14 +13,21 @@ MainWindow::MainWindow(QWidget *parent)
     , ui(new Ui::MainWindow)
 {
     ui->setupUi(this);
+    connect(timer, SIGNAL(timeout()), this, SLOT(Actulizar()));
+    running = true;
 
 }
+
 
 MainWindow::~MainWindow()
 {
     delete ui;
 }
 
+void Actualizar()
+{
+   running = true;
+}
 
 void MainWindow::on_Run_clicked()
 {
@@ -60,4 +67,5 @@ void MainWindow::on_horizontalSlider_valueChanged(int value)
 {
     equide = ui->horizontalSlider->value();
 }
+
 

@@ -2,6 +2,8 @@
 #define MAINWINDOW_H
 
 #include <QMainWindow>
+#include <QTimer>
+#include <QTime>
 
 QT_BEGIN_NAMESPACE
 namespace Ui { class MainWindow; }
@@ -14,6 +16,11 @@ class MainWindow : public QMainWindow
 public:
     MainWindow(QWidget *parent = nullptr);
     ~MainWindow();
+    int equide=1;
+    bool running=false;
+    QTimer *timer=new QTimer();
+    QTime time;
+
 
 private slots:
     void on_Run_clicked();
@@ -24,11 +31,12 @@ private slots:
 
     void on_checkBox_clicked(bool checked);
 
+    void Actualizar();
+
 private:
     Ui::MainWindow *ui;
-    int equide= 1;
-    bool running= false;
-    void UpdateStatus();
+
 
 };
 #endif // MAINWINDOW_H
+
