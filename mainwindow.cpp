@@ -4,6 +4,9 @@
 #include <windows.h>
 #include <tlhelp32.h>
 #include <iostream>
+#include <stdio.h>
+#include <process.h>
+
 using namespace std;
 
 DWORD FindProcessId(const std::wstring& processName);
@@ -26,9 +29,17 @@ MainWindow::~MainWindow()
 
 void MainWindow::Actualizar()
 {
-    running = true;
-}
 
+/*    if ( FindProcessId(L"firefox.exe") )
+    {
+        running = true;
+    }
+    else
+    {
+        running = false;
+    }
+*/
+}
 
 
 void MainWindow::on_Run_clicked()
