@@ -24,10 +24,12 @@ MainWindow::~MainWindow()
     delete ui;
 }
 
-void Actualizar()
+void MainWindow::Actualizar()
 {
-   running = true;
+    running = true;
 }
+
+
 
 void MainWindow::on_Run_clicked()
 {

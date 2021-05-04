@@ -21,6 +21,8 @@ public:
     QTimer *timer=new QTimer();
     QTime time;
 
+public slots:
+
 
 private slots:
     void on_Run_clicked();
