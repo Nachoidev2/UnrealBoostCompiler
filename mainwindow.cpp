@@ -6,6 +6,11 @@
 #include <iostream>
 #include <stdio.h>
 #include <process.h>
+#include <fstream>
+#include <sys/stat.h>
+#include <unistd.h>
+#include <string>
+
 
 using namespace std;
 
@@ -16,7 +21,8 @@ MainWindow::MainWindow(QWidget *parent)
     , ui(new Ui::MainWindow)
 {
     ui->setupUi(this);
-    connect(timer, SIGNAL(timeout()), this, SLOT(Actulizar()));
+    connect(timer, SIGNAL(timeout()), this, SLOT(actualizarEstado()));
+    MainWindow::Actualizar();
     running = true;
 
 }
@@ -29,8 +35,20 @@ MainWindow::~MainWindow()
 
 void MainWindow::Actualizar()
 {
-
-/*    if ( FindProcessId(L"firefox.exe") )
+    ui->RunUnrealCompiler->setText("On");
+    QString fileName("./Equide.txt");
+    QFile file(fileName);
+    if(QFileInfo::exists(fileName))
+    {
+        ui->RunUnrealCompiler->setText("On");
+        running = true;
+    }
+    else
+    {
+        ui->RunUnrealCompiler->setText("Off");
+        running = false;
+    }
+    if (equide == true)
     {
         running = true;
     }
@@ -38,7 +56,7 @@ void MainWindow::Actualizar()
     {
         running = false;
     }
-*/
+
 }
 
 
@@ -56,6 +74,7 @@ void MainWindow::on_Run_clicked()
         {
                 system("wmic process where name=\"ShaderCompileWorker.exe\" CALL setpriority 32768");
                 ui->RunBoost->setText("On");
+                ui->RunUnrealCompiler->setText("On");
 
         }
         if (equide == 2)
@@ -80,5 +99,6 @@ void MainWindow::on_horizontalSlider_valueChanged(int value)
 {
     equide = ui->horizontalSlider->value();
 }
+
 
 

@@ -4,6 +4,10 @@
 #include <QMainWindow>
 #include <QTimer>
 #include <QTime>
+#include <QProcess>
+#include <QFile>
+#include <QFileInfo>
+
 
 QT_BEGIN_NAMESPACE
 namespace Ui { class MainWindow; }
@@ -34,6 +38,8 @@ private slots:
     void on_checkBox_clicked(bool checked);
 
     void Actualizar();
+
+    void on_RunUnrealCompiler_linkActivated(const QString &link);
 
 private:
     Ui::MainWindow *ui;
