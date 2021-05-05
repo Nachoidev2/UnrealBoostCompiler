@@ -22,7 +22,6 @@ MainWindow::MainWindow(QWidget *parent)
 {
     ui->setupUi(this);
     connect(timer, SIGNAL(timeout()), this, SLOT(actualizarEstado()));
-    MainWindow::Actualizar();
     running = true;
 
 }
@@ -34,6 +33,11 @@ MainWindow::~MainWindow()
 }
 
 void MainWindow::Actualizar()
+{
+   CheckRunUnrealCompiler();
+}
+
+void MainWindow::CheckRunUnrealCompiler()
 {
     ui->RunUnrealCompiler->setText("On");
     QString fileName("./Equide.txt");
@@ -58,7 +62,6 @@ void MainWindow::Actualizar()
     }
 
 }
-
 
 void MainWindow::on_Run_clicked()
 {

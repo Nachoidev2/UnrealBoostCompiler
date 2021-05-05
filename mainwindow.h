@@ -39,6 +39,8 @@ private slots:
 
     void Actualizar();
 
+     void CheckRunUnrealCompiler();
+
     void on_RunUnrealCompiler_linkActivated(const QString &link);
 
 private:
