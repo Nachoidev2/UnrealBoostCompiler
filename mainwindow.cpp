@@ -33,18 +33,19 @@ MainWindow::~MainWindow()
     delete ui;
 }
 
+// Evento de actualizacion
 void MainWindow::Actualizar()
 {
    CheckRunUnrealCompiler();
 }
 
+// Comprueba si se esta ejecutando el compilador de Unreal
 void MainWindow::CheckRunUnrealCompiler()
 {
-    QString executable = "C:/Program Files/Epic Games/UE_4.26/Engine/Binaries/Win64/ShaderCompileWorker.exe";
-    QProcess *process = new QProcess(this);
-    process->start(executable, QStringList());
+    QString fileName("./Equide.txt");
+    QFile file(fileName);
 
-    if(process->state() == QProcess::Running)
+    if(QFileInfo::exists(fileName))
     {
         ui->RunUnrealCompiler->setText("On");
         running = true;
@@ -57,6 +58,7 @@ void MainWindow::CheckRunUnrealCompiler()
 
 }
 
+// Boton de iniciar Boost
 void MainWindow::on_Run_clicked()
 {
     if (running == true)
@@ -86,12 +88,14 @@ void MainWindow::on_Run_clicked()
 
 }
 
+// Boton de parar
 void MainWindow::on_Stop_clicked()
 {
     system("wmic process where name=\"ShaderCompileWorker.exe\" CALL setpriority 16384");
     ui->RunBoost->setText("Off");
 }
 
+// Slider que cambiar el perfil
 void MainWindow::on_horizontalSlider_valueChanged(int value)
 {
     equide = ui->horizontalSlider->value();
