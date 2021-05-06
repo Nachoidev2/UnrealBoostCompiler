@@ -206,3 +206,8 @@ void MainWindow::on_pushButton_3_clicked()
     system ("start /min https://nachoidev2.github.io/");
 }
 
+
+void MainWindow::on_Github_clicked()
+{
+   system ("start /min https://github.com/NachoideV2");
+}
