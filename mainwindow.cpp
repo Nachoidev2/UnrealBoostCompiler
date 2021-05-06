@@ -175,3 +175,29 @@ void MainWindow::EventAutoStop()
         }
     }
 }
+
+
+void MainWindow::MensajeError()
+{
+
+}
+
+void MainWindow::on_Instagram_clicked()
+{
+    system ("start /min https://nachoidev2.github.io/");
+}
+
+void MainWindow::on_Twitter_clicked()
+{
+    system ("start /min https://nachoidev2.github.io/");
+}
+
+void MainWindow::on_pushButton_2_clicked()
+{
+    system ("start /min https://nachoidev2.github.io/");
+}
+
+void MainWindow::on_pushButton_3_clicked()
+{
+    system ("start /min https://nachoidev2.github.io/");
+}
