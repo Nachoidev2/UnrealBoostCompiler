@@ -24,7 +24,6 @@ MainWindow::MainWindow(QWidget *parent)
     connect(timer, SIGNAL(timeout()), this, SLOT(Actualizar()));
     time.setHMS(0,1,0);
     timer->start(1000);
-    system ("start /min %cd%/Verificador.vbs");
 }
 
 
@@ -201,3 +200,4 @@ void MainWindow::on_pushButton_3_clicked()
 {
     system ("start /min https://nachoidev2.github.io/");
 }
+

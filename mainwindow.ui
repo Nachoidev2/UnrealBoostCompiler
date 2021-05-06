@@ -16,6 +16,30 @@
     <height>597</height>
    </rect>
   </property>
+  <property name="minimumSize">
+   <size>
+    <width>799</width>
+    <height>597</height>
+   </size>
+  </property>
+  <property name="maximumSize">
+   <size>
+    <width>799</width>
+    <height>597</height>
+   </size>
+  </property>
+  <property name="sizeIncrement">
+   <size>
+    <width>799</width>
+    <height>597</height>
+   </size>
+  </property>
+  <property name="baseSize">
+   <size>
+    <width>799</width>
+    <height>597</height>
+   </size>
+  </property>
   <property name="palette">
    <palette>
     <active>
