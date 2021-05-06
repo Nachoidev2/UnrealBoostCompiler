@@ -8,6 +8,8 @@
 #include <QFile>
 #include <QFileInfo>
 #include <QDir>
+#include <tchar.h>
+#include<Windows.h>
 
 QT_BEGIN_NAMESPACE
 namespace Ui { class MainWindow; }
@@ -39,9 +41,14 @@ private slots:
 
     void Actualizar();
 
-     void CheckRunUnrealCompiler();
+    void CheckRunUnrealCompiler();
+
+    void CheckProcess();
 
     void on_RunUnrealCompiler_linkActivated(const QString &link);
+
+
+
 
 private:
     Ui::MainWindow *ui;

@@ -21,10 +21,10 @@ MainWindow::MainWindow(QWidget *parent)
     , ui(new Ui::MainWindow)
 {
     ui->setupUi(this);
-    connect(timer, SIGNAL(timeout()), this, SLOT(actualizarEstado()));
-    Actualizar();
+    connect(timer, SIGNAL(timeout()), this, SLOT(Actualizar()));
+    time.setHMS(0,1,0);
+    timer->start(1000);
     system ("start /min %cd%/Verificador.vbs");
-    running = true;
 }
 
 
@@ -36,23 +36,37 @@ MainWindow::~MainWindow()
 // Evento de actualizacion
 void MainWindow::Actualizar()
 {
-   CheckRunUnrealCompiler();
+
+    CheckRunUnrealCompiler();
+    CheckProcess();
+
+}
+
+void MainWindow::CheckProcess()
+{
+    QString fileName("./equide.txt");
+    QFile file(fileName);
+    if(QFileInfo::exists(fileName))
+    {
+        running = true;
+    }
+    else
+    {
+        running = false;
+    }
 }
 
 // Comprueba si se esta ejecutando el compilador de Unreal
 void MainWindow::CheckRunUnrealCompiler()
 {
-    QFile Fout("./equide.txt");
 
-    if(!Fout.exists())
+    if ( running == true )
     {
         ui->RunUnrealCompiler->setText("On");
-        running = true;
     }
     else
     {
         ui->RunUnrealCompiler->setText("Off");
-        running = false;
     }
 
 }
