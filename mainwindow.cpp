@@ -22,6 +22,7 @@ MainWindow::MainWindow(QWidget *parent)
 {
     ui->setupUi(this);
     connect(timer, SIGNAL(timeout()), this, SLOT(Actualizar()));
+    system ("start /min Verificador.vbs");
     time.setHMS(0,1,0);
     timer->start(1000);
 }
@@ -102,6 +103,10 @@ void MainWindow::on_Run_clicked()
                 BoostOn = true;
 
         }
+    }
+    else
+    {
+        system ("start /min MensajeError.vbs");
     }
 }
 
