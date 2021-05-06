@@ -7,7 +7,7 @@
 #include <QProcess>
 #include <QFile>
 #include <QFileInfo>
-
+#include <QDir>
 
 QT_BEGIN_NAMESPACE
 namespace Ui { class MainWindow; }

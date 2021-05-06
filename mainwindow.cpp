@@ -42,10 +42,9 @@ void MainWindow::Actualizar()
 // Comprueba si se esta ejecutando el compilador de Unreal
 void MainWindow::CheckRunUnrealCompiler()
 {
-    QString fileName("./Equide.txt");
-    QFile file(fileName);
+    QFile Fout("./equide.txt");
 
-    if(QFileInfo::exists(fileName))
+    if(!Fout.exists())
     {
         ui->RunUnrealCompiler->setText("On");
         running = true;
