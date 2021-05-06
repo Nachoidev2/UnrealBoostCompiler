@@ -70,7 +70,14 @@ void MainWindow::CheckRunUnrealCompiler()
     {
         ui->RunUnrealCompiler->setText("Off");
     }
-
+    if (BoostOn == true)
+    {
+        ui->RunBoost->setText("On");
+    }
+    else
+    {
+        ui->RunBoost->setText("Off");
+    }
 }
 
 // Boton de iniciar Boost
@@ -81,21 +88,18 @@ void MainWindow::on_Run_clicked()
         if (equide == 0)
         {
                 system("wmic process where name=\"ShaderCompileWorker.exe\" CALL setpriority 32");
-                ui->RunBoost->setText("On");
                 BoostOn = false;
 
         }
         if (equide == 1)
         {
                 system("wmic process where name=\"ShaderCompileWorker.exe\" CALL setpriority 32768");
-                ui->RunBoost->setText("On");
                 BoostOn = false;
 
         }
         if (equide == 2)
         {
                 system("wmic process where name=\"ShaderCompileWorker.exe\" CALL setpriority 128");
-                ui->RunBoost->setText("On");
                 BoostOn = false;
 
         }
@@ -139,22 +143,18 @@ void MainWindow::EventAutoRun()
                 if (equide == 0)
                 {
                         system("wmic process where name=\"ShaderCompileWorker.exe\" CALL setpriority 32");
-                        ui->RunBoost->setText("On");
                         BoostOn = true;
 
                 }
                 if (equide == 1)
                 {
                         system("wmic process where name=\"ShaderCompileWorker.exe\" CALL setpriority 32768");
-                        ui->RunBoost->setText("On");
-                        ui->RunUnrealCompiler->setText("On");
                         BoostOn = true;
 
                 }
                 if (equide == 2)
                 {
                         system("wmic process where name=\"ShaderCompileWorker.exe\" CALL setpriority 128");
-                        ui->RunBoost->setText("On");
                         BoostOn = true;
 
                 }
@@ -170,7 +170,6 @@ void MainWindow::EventAutoStop()
     {
         if (BoostOn == true)
         {
-            ui->RunBoost->setText("Off");
             BoostOn = false;
         }
     }
