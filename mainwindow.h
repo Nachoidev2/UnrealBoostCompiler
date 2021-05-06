@@ -37,15 +37,12 @@ private slots:
 
     void on_horizontalSlider_valueChanged(int value);
 
-    void on_checkBox_clicked(bool checked);
-
     void Actualizar();
 
     void CheckRunUnrealCompiler();
 
     void CheckProcess();
 
-    void on_RunUnrealCompiler_linkActivated(const QString &link);
 
 
 
