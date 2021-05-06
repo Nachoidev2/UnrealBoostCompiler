@@ -44,7 +44,7 @@ void MainWindow::CheckRunUnrealCompiler()
     QProcess *process = new QProcess(this);
     process->start(executable, QStringList());
 
-    if(process->state() == QProcess::Starting)
+    if(process->state() == QProcess::Running)
     {
         ui->RunUnrealCompiler->setText("On");
         running = true;
