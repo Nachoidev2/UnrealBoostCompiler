@@ -39,6 +39,7 @@ void MainWindow::Actualizar()
 
     CheckRunUnrealCompiler();
     CheckProcess();
+    EventAutoRun();
 
 }
 
@@ -96,9 +97,6 @@ void MainWindow::on_Run_clicked()
 
         }
     }
-
-
-
 }
 
 // Boton de parar
@@ -114,5 +112,44 @@ void MainWindow::on_horizontalSlider_valueChanged(int value)
     equide = ui->horizontalSlider->value();
 }
 
+// AutoRun
+void MainWindow::on_checkBox_toggled(bool checked)
+{
+    if (checked == true)
+    {
+        AutoRun = true;
+    }
+    else
+    {
+        AutoRun = false;
+    }
+}
 
+void MainWindow::EventAutoRun()
+{
+    if (AutoRun == true)
+    {
+        if (running == true)
+        {
+            if (equide == 0)
+            {
+                    system("wmic process where name=\"ShaderCompileWorker.exe\" CALL setpriority 32");
+                    ui->RunBoost->setText("On");
 
+            }
+            if (equide == 1)
+            {
+                    system("wmic process where name=\"ShaderCompileWorker.exe\" CALL setpriority 32768");
+                    ui->RunBoost->setText("On");
+                    ui->RunUnrealCompiler->setText("On");
+
+            }
+            if (equide == 2)
+            {
+                    system("wmic process where name=\"ShaderCompileWorker.exe\" CALL setpriority 128");
+                    ui->RunBoost->setText("On");
+
+            }
+        }
+    }
+}
