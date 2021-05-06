@@ -88,19 +88,19 @@ void MainWindow::on_Run_clicked()
         if (equide == 0)
         {
                 system("wmic process where name=\"ShaderCompileWorker.exe\" CALL setpriority 32");
-                BoostOn = false;
+                BoostOn = true;
 
         }
         if (equide == 1)
         {
                 system("wmic process where name=\"ShaderCompileWorker.exe\" CALL setpriority 32768");
-                BoostOn = false;
+                BoostOn = true;
 
         }
         if (equide == 2)
         {
                 system("wmic process where name=\"ShaderCompileWorker.exe\" CALL setpriority 128");
-                BoostOn = false;
+                BoostOn = true;
 
         }
     }
