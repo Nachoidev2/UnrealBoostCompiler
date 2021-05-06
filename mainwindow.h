@@ -25,6 +25,7 @@ public:
     int equide=1;
     bool running=false;
     bool AutoRun=false;
+    bool BoostOn=false;
     QTimer *timer=new QTimer();
     QTime time;
 
@@ -45,6 +46,8 @@ private slots:
     void CheckProcess();
 
     void EventAutoRun();
+
+    void EventAutoStop();
 
     void on_checkBox_toggled(bool checked);
 
