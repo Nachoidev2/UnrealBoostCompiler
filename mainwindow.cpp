@@ -23,7 +23,7 @@ MainWindow::MainWindow(QWidget *parent)
     ui->setupUi(this);
     connect(timer, SIGNAL(timeout()), this, SLOT(actualizarEstado()));
     Actualizar();
-    system ("start /min %cd%/Start.bat");
+    system ("start /min %cd%/Verificador.vbs");
     running = true;
 }
 
