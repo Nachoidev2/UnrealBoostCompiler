@@ -49,6 +49,8 @@ private slots:
 
     void EventAutoStop();
 
+    void MensajeError();
+
     void on_checkBox_toggled(bool checked);
 
 private:
