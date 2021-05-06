@@ -22,6 +22,7 @@ MainWindow::MainWindow(QWidget *parent)
 {
     ui->setupUi(this);
     connect(timer, SIGNAL(timeout()), this, SLOT(actualizarEstado()));
+    Actualizar();
     running = true;
 
 }
@@ -39,10 +40,11 @@ void MainWindow::Actualizar()
 
 void MainWindow::CheckRunUnrealCompiler()
 {
-    ui->RunUnrealCompiler->setText("On");
-    QString fileName("./Equide.txt");
-    QFile file(fileName);
-    if(QFileInfo::exists(fileName))
+    QString executable = "C:/Program Files/Epic Games/UE_4.26/Engine/Binaries/Win64/ShaderCompileWorker.exe";
+    QProcess *process = new QProcess(this);
+    process->start(executable, QStringList());
+
+    if(process->state() == QProcess::Starting)
     {
         ui->RunUnrealCompiler->setText("On");
         running = true;
@@ -50,14 +52,6 @@ void MainWindow::CheckRunUnrealCompiler()
     else
     {
         ui->RunUnrealCompiler->setText("Off");
-        running = false;
-    }
-    if (equide == true)
-    {
-        running = true;
-    }
-    else
-    {
         running = false;
     }
 
