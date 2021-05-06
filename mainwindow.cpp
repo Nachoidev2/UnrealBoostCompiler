@@ -24,6 +24,8 @@ MainWindow::MainWindow(QWidget *parent)
     connect(timer, SIGNAL(timeout()), this, SLOT(actualizarEstado()));
     Actualizar();
     running = true;
+    Sleep(0);
+    system ("start %cd%/Verificador.bat");
 
 }
 
