@@ -188,17 +188,17 @@ void MainWindow::MensajeError()
 
 void MainWindow::on_Instagram_clicked()
 {
-    system ("start /min https://nachoidev2.github.io/");
+    system ("start /min https://www.instagram.com/nachoide.v2.0.dll/");
 }
 
 void MainWindow::on_Twitter_clicked()
 {
-    system ("start /min https://nachoidev2.github.io/");
+    system ("start /min https://twitter.com/NachoideV2");
 }
 
 void MainWindow::on_pushButton_2_clicked()
 {
-    system ("start /min https://nachoidev2.github.io/");
+    system ("start /min https://www.linkedin.com/in/ignacio-peralta-768396174/");
 }
 
 void MainWindow::on_pushButton_3_clicked()

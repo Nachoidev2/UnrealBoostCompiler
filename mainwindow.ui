@@ -962,7 +962,7 @@
        </property>
        <property name="icon">
         <iconset>
-         <normalon>:/boost.png</normalon>
+         <normalon>:/web-search-engine.png</normalon>
         </iconset>
        </property>
        <property name="iconSize">
@@ -976,28 +976,72 @@
      <item>
       <widget class="QPushButton" name="Instagram">
        <property name="text">
-        <string>IG</string>
+        <string/>
+       </property>
+       <property name="icon">
+        <iconset>
+         <normalon>:/instagram.png</normalon>
+        </iconset>
+       </property>
+       <property name="iconSize">
+        <size>
+         <width>32</width>
+         <height>32</height>
+        </size>
        </property>
       </widget>
      </item>
      <item>
       <widget class="QPushButton" name="Twitter">
        <property name="text">
-        <string>Tw</string>
+        <string/>
+       </property>
+       <property name="icon">
+        <iconset>
+         <normalon>:/twitter.png</normalon>
+        </iconset>
+       </property>
+       <property name="iconSize">
+        <size>
+         <width>32</width>
+         <height>32</height>
+        </size>
        </property>
       </widget>
      </item>
      <item>
       <widget class="QPushButton" name="Github">
        <property name="text">
-        <string>GH</string>
+        <string/>
+       </property>
+       <property name="icon">
+        <iconset>
+         <normalon>:/github.png</normalon>
+        </iconset>
+       </property>
+       <property name="iconSize">
+        <size>
+         <width>32</width>
+         <height>32</height>
+        </size>
        </property>
       </widget>
      </item>
      <item>
       <widget class="QPushButton" name="pushButton_2">
        <property name="text">
-        <string>Lk</string>
+        <string/>
+       </property>
+       <property name="icon">
+        <iconset>
+         <normalon>:/linkedin.png</normalon>
+        </iconset>
+       </property>
+       <property name="iconSize">
+        <size>
+         <width>32</width>
+         <height>32</height>
+        </size>
        </property>
       </widget>
      </item>

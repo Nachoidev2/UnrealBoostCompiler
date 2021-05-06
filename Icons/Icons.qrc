@@ -1,5 +1,10 @@
 <RCC>
     <qresource prefix="/">
         <file>boost.png</file>
+        <file>github.png</file>
+        <file>instagram.png</file>
+        <file>linkedin.png</file>
+        <file>twitter.png</file>
+        <file>web-search-engine.png</file>
     </qresource>
 </RCC>
