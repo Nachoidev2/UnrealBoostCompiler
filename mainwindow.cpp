@@ -48,27 +48,33 @@ void MainWindow::CheckProcess()
 {
     QString fileName("./equide.txt");
     QFile file(fileName);
-    if(QFileInfo::exists(fileName))
+
+    if(QFileInfo::exists(fileName)== true)
     {
         running = true;
         Shaders = true;
     }
     else
     {
-        running = false;
         Shaders = false;
     }
+
     QString fileName2("./equide2.txt");
     QFile file2(fileName2);
-    if(QFileInfo::exists(fileName2))
+
+    if(QFileInfo::exists(fileName2) == true)
     {
         running = true;
         Light = true;
     }
     else
     {
-        running = false;
         Light = false;
+    }
+    if (QFileInfo::exists(fileName) == false & QFileInfo::exists(fileName2) == false)
+    {
+        running = false;
+
     }
 }
 
