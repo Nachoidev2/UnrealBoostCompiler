@@ -88,18 +88,21 @@ void MainWindow::on_Run_clicked()
         if (equide == 0)
         {
                 system("wmic process where name=\"ShaderCompileWorker.exe\" CALL setpriority 32");
+                system("wmic process where name=\"UnrealLightmass.exe\" CALL setpriority 32");
                 BoostOn = true;
 
         }
         if (equide == 1)
         {
                 system("wmic process where name=\"ShaderCompileWorker.exe\" CALL setpriority 32768");
+                system("wmic process where name=\"UnrealLightmass.exe\" CALL setpriority 32768");
                 BoostOn = true;
 
         }
         if (equide == 2)
         {
                 system("wmic process where name=\"ShaderCompileWorker.exe\" CALL setpriority 128");
+                system("wmic process where name=\"UnrealLightmass.exe\" CALL setpriority 128");
                 BoostOn = true;
 
         }
@@ -147,18 +150,21 @@ void MainWindow::EventAutoRun()
                 if (equide == 0)
                 {
                         system("wmic process where name=\"ShaderCompileWorker.exe\" CALL setpriority 32");
+                        system("wmic process where name=\"UnrealLightmass.exe\" CALL setpriority 32");
                         BoostOn = true;
 
                 }
                 if (equide == 1)
                 {
                         system("wmic process where name=\"ShaderCompileWorker.exe\" CALL setpriority 32768");
+                        system("wmic process where name=\"UnrealLightmass.exe\" CALL setpriority 32768");
                         BoostOn = true;
 
                 }
                 if (equide == 2)
                 {
                         system("wmic process where name=\"ShaderCompileWorker.exe\" CALL setpriority 128");
+                        system("wmic process where name=\"UnrealLightmass.exe\" CALL setpriority 128");
                         BoostOn = true;
 
                 }
