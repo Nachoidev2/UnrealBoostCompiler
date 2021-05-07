@@ -487,7 +487,7 @@
     <property name="geometry">
      <rect>
       <x>580</x>
-      <y>120</y>
+      <y>100</y>
       <width>201</width>
       <height>301</height>
      </rect>
@@ -592,7 +592,7 @@
     <property name="geometry">
      <rect>
       <x>10</x>
-      <y>120</y>
+      <y>100</y>
       <width>551</width>
       <height>230</height>
      </rect>
@@ -769,7 +769,7 @@
     <property name="geometry">
      <rect>
       <x>10</x>
-      <y>360</y>
+      <y>340</y>
       <width>477</width>
       <height>111</height>
      </rect>
@@ -967,7 +967,7 @@
     <property name="geometry">
      <rect>
       <x>230</x>
-      <y>510</y>
+      <y>520</y>
       <width>331</width>
       <height>101</height>
      </rect>
@@ -1068,9 +1068,9 @@
    <widget class="QLabel" name="label_3">
     <property name="geometry">
      <rect>
-      <x>240</x>
-      <y>490</y>
-      <width>311</width>
+      <x>120</x>
+      <y>500</y>
+      <width>551</width>
       <height>41</height>
      </rect>
     </property>
@@ -1112,7 +1112,20 @@
      </palette>
     </property>
     <property name="text">
-     <string>Created by NachoideV2 </string>
+     <string>Copyright © 2021 Created by NachoideV2 </string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label_10">
+    <property name="geometry">
+     <rect>
+      <x>10</x>
+      <y>550</y>
+      <width>191</width>
+      <height>51</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Version 0.1.0</string>
     </property>
    </widget>
   </widget>
