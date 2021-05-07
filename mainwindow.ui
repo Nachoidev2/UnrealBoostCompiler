@@ -594,7 +594,7 @@
       <x>10</x>
       <y>120</y>
       <width>551</width>
-      <height>171</height>
+      <height>230</height>
      </rect>
     </property>
     <layout class="QVBoxLayout" name="verticalLayout_2">
@@ -714,12 +714,30 @@
        <item>
         <widget class="QLabel" name="label_2">
          <property name="text">
-          <string>Unreal Compiler :</string>
+          <string>Unreal Shaders Compiler :</string>
          </property>
         </widget>
        </item>
        <item>
         <widget class="QLabel" name="RunUnrealCompiler">
+         <property name="text">
+          <string>Off</string>
+         </property>
+        </widget>
+       </item>
+      </layout>
+     </item>
+     <item>
+      <layout class="QHBoxLayout" name="horizontalLayout_5">
+       <item>
+        <widget class="QLabel" name="label_9">
+         <property name="text">
+          <string>Unreal Build Light :</string>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QLabel" name="RunUnrealLight">
          <property name="text">
           <string>Off</string>
          </property>
@@ -751,7 +769,7 @@
     <property name="geometry">
      <rect>
       <x>10</x>
-      <y>320</y>
+      <y>360</y>
       <width>477</width>
       <height>111</height>
      </rect>

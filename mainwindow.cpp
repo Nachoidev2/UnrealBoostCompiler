@@ -51,10 +51,24 @@ void MainWindow::CheckProcess()
     if(QFileInfo::exists(fileName))
     {
         running = true;
+        Shaders = true;
     }
     else
     {
         running = false;
+        Shaders = false;
+    }
+    QString fileName2("./equide2.txt");
+    QFile file2(fileName2);
+    if(QFileInfo::exists(fileName2))
+    {
+        running = true;
+        Light = true;
+    }
+    else
+    {
+        running = false;
+        Light = false;
     }
 }
 
@@ -62,13 +76,21 @@ void MainWindow::CheckProcess()
 void MainWindow::CheckRunUnrealCompiler()
 {
 
-    if ( running == true )
+    if ( Shaders == true )
     {
         ui->RunUnrealCompiler->setText("On");
     }
     else
     {
         ui->RunUnrealCompiler->setText("Off");
+    }
+    if (Light == true)
+    {
+        ui->RunUnrealLight->setText("On");
+    }
+    else
+    {
+        ui->RunUnrealLight->setText("Off");
     }
     if (BoostOn == true)
     {

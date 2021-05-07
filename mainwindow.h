@@ -26,6 +26,8 @@ public:
     bool running=false;
     bool AutoRun=false;
     bool BoostOn=false;
+    bool Shaders=false;
+    bool Light=false;
     QTimer *timer=new QTimer();
     QTime time;
 
