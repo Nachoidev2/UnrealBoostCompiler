@@ -117,6 +117,7 @@ void MainWindow::on_Run_clicked()
 void MainWindow::on_Stop_clicked()
 {
     system("wmic process where name=\"ShaderCompileWorker.exe\" CALL setpriority 16384");
+    system("wmic process where name=\"UnrealLightmass.exe\" CALL setpriority 16384");
     BoostOn = false;
 }
 
@@ -181,6 +182,7 @@ void MainWindow::EventAutoStop()
         if (BoostOn == true)
         {
             system("wmic process where name=\"ShaderCompileWorker.exe\" CALL setpriority 16384");
+            system("wmic process where name=\"UnrealLightmass.exe\" CALL setpriority 16384");
             BoostOn = false;
         }
     }
