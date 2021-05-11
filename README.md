@@ -3,7 +3,7 @@ free and open source software to speed up the compilation process of shaders and
 
 Video Demostration :
 
-[![Watch the video](https://i.imgur.com/vKb2F1B.png)](https://www.youtube.com/embed/9o42-3Odcto)
+[![Watch the video](https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Ftse4.mm.bing.net%2Fth%3Fid%3DOVF.ijztVC3fAJq2xQW6E43TRA%26pid%3DApi&f=1)](https://www.youtube.com/embed/9o42-3Odcto)
 
 
 <a href="https://ibb.co/xYsQ9H2"><img src="https://i.ibb.co/68Z59By/photo-2021-05-07-05-30-30.jpg" alt="photo-2021-05-07-05-30-30" border="0" /></a>
